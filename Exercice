@@ -1,12 +1,27 @@
-Pour cet exercice, vous allez devoir créer des fixtures pour des ingrédients de recette de cuisine.
-Vous pouvez partir d'un nouveau projet.
+Vous allez maintenant pouvoir mettre en place des fixtures avec relations.
 
-En partant d'une entité nommée Ingredient et comportant l'attribut suivant :
+Pour cela, vous allez devoir créer une nouvelle entité, category, qui sera reliée à l'entité
+Ingredient de la façon suivante :
 
-name (string, 255, non nullable)
+Un ingrédient peut avoir une seule catégorie,
 
-Créer au minimum les fixtures suivantes :
+Une catégorie peut être reliée à plusieurs ingrédients.
 
-Sucre, Farine, Oeuf, Sel, Poivre, Chocolat, Tomate, Courgette, Crème.
 
-Vous pouvez ajouter d'autres ingrédients si vous le souhaitez.
+Créer les fixtures suivantes :
+
+Category :
+
+Légume
+
+Épice
+
+Céréale
+
+Condiment
+
+Produit pâtissier
+
+Produit laitier
+
+Il faudra ensuite modifier votre classe IngredientFixtures afin d'ajouter la catégorie correspondante.
