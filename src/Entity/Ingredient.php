@@ -16,6 +16,9 @@ class Ingredient
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
+    #[ORM\ManyToOne(inversedBy: 'ingredient')]
+    private ?Category $category_id = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,6 +32,18 @@ class Ingredient
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getCategoryId(): ?Category
+    {
+        return $this->category_id;
+    }
+
+    public function setCategoryId(?Category $category_id): self
+    {
+        $this->category_id = $category_id;
 
         return $this;
     }
