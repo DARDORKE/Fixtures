@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Category;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Faker\Factory;
 
 class CategoryFixtures extends Fixture
 {
@@ -23,6 +24,8 @@ class CategoryFixtures extends Fixture
         // $manager->persist($product);
         foreach (self::CATEGORIES as $categoryName){
             $category = new Category();
+            $faker = Factory::create();
+            $category->setDescription($faker->realText());
             $category->setTitle($categoryName);
             $this->addReference($categoryName, $category);
             $manager->persist($category);

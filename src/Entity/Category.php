@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\CategoryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
@@ -20,6 +21,9 @@ class Category
 
     #[ORM\OneToMany(mappedBy: 'category_id', targetEntity: Ingredient::class)]
     private Collection $ingredient;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $Description = null;
 
     public function __construct()
     {
@@ -69,6 +73,18 @@ class Category
                 $ingredient->setCategoryId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->Description;
+    }
+
+    public function setDescription(string $Description): self
+    {
+        $this->Description = $Description;
 
         return $this;
     }
