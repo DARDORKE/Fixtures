@@ -1,27 +1,3 @@
-Vous allez maintenant pouvoir mettre en place des fixtures avec relations.
+Ajoutez un champ description (de type text et non string 255) à l'entité Category.
 
-Pour cela, vous allez devoir créer une nouvelle entité, category, qui sera reliée à l'entité
-Ingredient de la façon suivante :
-
-Un ingrédient peut avoir une seule catégorie,
-
-Une catégorie peut être reliée à plusieurs ingrédients.
-
-
-Créer les fixtures suivantes :
-
-Category :
-
-Légume
-
-Épice
-
-Céréale
-
-Condiment
-
-Produit pâtissier
-
-Produit laitier
-
-Il faudra ensuite modifier votre classe IngredientFixtures afin d'ajouter la catégorie correspondante.
+Générez une description aléatoire à l'aide de Faker.
