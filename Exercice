@@ -1,0 +1,12 @@
+Pour cet exercice, vous allez devoir créer des fixtures pour des ingrédients de recette de cuisine.
+Vous pouvez partir d'un nouveau projet.
+
+En partant d'une entité nommée Ingredient et comportant l'attribut suivant :
+
+name (string, 255, non nullable)
+
+Créer au minimum les fixtures suivantes :
+
+Sucre, Farine, Oeuf, Sel, Poivre, Chocolat, Tomate, Courgette, Crème.
+
+Vous pouvez ajouter d'autres ingrédients si vous le souhaitez.
