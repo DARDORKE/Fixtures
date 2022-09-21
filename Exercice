@@ -1,3 +1,8 @@
-Ajoutez un champ description (de type text et non string 255) à l'entité Category.
+Pour cet exercice final, vous allez devoir tester la montée en charge de votre application en lui ajoutant
+ une base utilisateurs tests conséquente.
 
-Générez une description aléatoire à l'aide de Faker.
+ Pour l'entité SubscriptionType, vous devez générer les données suivantes
+ (l'id est incrémenté automatiquement, inutile de tenter de mettre le même id que ci-dessous !)
+
+ Pour l'entité User, vous devez générer 1 000 prénoms aléatoires comportant chacun une adresse aléatoire et un type de
+  souscription aléatoire également.
